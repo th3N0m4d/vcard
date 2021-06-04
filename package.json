@@ -4,11 +4,12 @@
   "private": true,
   "scripts": {
     "dev": "nuxt",
-    "build": "nuxt build",
+    "build": "npm run export",
     "start": "yarn run generate && nuxt start",
     "generate": "nuxt generate",
     "lint:js": "eslint --ext \".js,.vue\" --ignore-path .gitignore .",
-    "lint": "yarn lint:js"
+    "lint": "yarn lint:js",
+    "export": "next build && next export"
   },
   "dependencies": {
     "@nuxtjs/pwa": "^3.3.5",
