@@ -1,635 +1,27 @@
 <template>
   <div class="crt-wrapper">
-    <header id="crt-header">
-      <div class="crt-head-inner crt-container">
-        <div class="crt-container-sm">
-          <div class="crt-head-row">
-            <div id="crt-head-col1" class="crt-head-col text-left">
-              <a id="crt-logo" class="crt-logo" href="index.html">
-                <img
-                  src="assets/images/uploads/brand/logo.svg"
-                  alt="certy resume"
-                /><span>.Certy</span>
-              </a>
-            </div>
-            <div id="crt-head-col2" class="crt-head-col text-right">
-              <div class="crt-nav-container crt-container hidden-sm hidden-xs">
-                <nav id="crt-main-nav">
-                  <ul class="clear-list">
-                    <li><a href="index.html">home</a></li>
-                    <li><a href="portfolio.html">portfolio</a></li>
-                    <li class="has-sub-menu">
-                      <a href="#">pages</a>
-                      <ul class="sub-menu">
-                        <li><a href="typography.html">typography</a></li>
-                        <li><a href="components.html">components</a></li>
-                        <li><a href="search.html">search</a></li>
-                        <li><a href="404.html">404</a></li>
-                      </ul>
-                    </li>
-                    <li class="has-sub-menu">
-                      <a href="category.html">blog</a>
-                      <ul class="sub-menu">
-                        <li><a href="single.html">single</a></li>
-                        <li><a href="single-image.html">single image</a></li>
-                        <li><a href="single-slider.html">single slider</a></li>
-                        <li>
-                          <a href="single-youtube.html">single youtube</a>
-                        </li>
-                        <li><a href="single-vimeo.html">single vimeo</a></li>
-                        <li>
-                          <a href="single-dailymotion.html"
-                            >single dailymotion</a
-                          >
-                        </li>
-                        <li>
-                          <a href="single-soundcloud.html">single soundcloud</a>
-                        </li>
-                        <li><a href="single-video.html">single video</a></li>
-                        <li><a href="single-audio.html">single audio</a></li>
-                      </ul>
-                    </li>
-                    <li><a href="contact.html">contact</a></li>
-                  </ul>
-                </nav>
-              </div>
-            </div>
-            <div id="crt-head-col3" class="crt-head-col text-right">
-              <button id="crt-sidebar-btn" class="btn btn-icon btn-shade">
-                <span class="crt-icon crt-icon-side-bar-icon"></span>
-              </button>
-            </div>
-          </div>
-        </div>
-        <!-- .crt-head-inner -->
-      </div>
-      <nav id="crt-nav-sm" class="crt-nav hidden-lg hidden-md">
-        <ul class="clear-list">
-          <li>
-            <a href="index.html" data-tooltip="Home"
-              ><img
-                class="avatar avatar-42"
-                src="assets/images/uploads/avatar/avatar-42x42.png"
-                srcset="assets/images/uploads/avatar/avatar-84x84-2x.png 2x"
-                alt=""
-            /></a>
-          </li>
-          <li>
-            <a href="experience.html" data-tooltip="Experience"
-              ><span class="crt-icon crt-icon-experience"></span
-            ></a>
-          </li>
-          <li>
-            <a href="portfolio.html" data-tooltip="Portfolio"
-              ><span class="crt-icon crt-icon-portfolio"></span
-            ></a>
-          </li>
-          <li>
-            <a href="testimonials.html" data-tooltip="References"
-              ><span class="crt-icon crt-icon-references"></span
-            ></a>
-          </li>
-          <li>
-            <a href="contact.html" data-tooltip="Contact"
-              ><span class="crt-icon crt-icon-contact"></span
-            ></a>
-          </li>
-          <li>
-            <a href="category.html" data-tooltip="Blog"
-              ><span class="crt-icon crt-icon-blog"></span
-            ></a>
-          </li>
-        </ul>
-      </nav>
-      <!-- #crt-nav-sm -->
-    </header>
+    <AppHeader />
     <!-- #crt-header -->
     <div id="crt-container" class="crt-container">
       <div id="crt-side-box-wrap" class="crt-sticky">
         <div id="crt-side-box">
-          <div class="crt-side-box-item">
-            <div class="crt-card bg-primary text-center">
-              <div class="crt-card-avatar">
-                <img
-                  class="avatar avatar-195"
-                  src="assets/images/uploads/avatar/avatar-195x195.png"
-                  srcset="assets/images/uploads/avatar/avatar-390x390-2x.png 2x"
-                  width="195"
-                  height="195"
-                  alt=""
-                />
-              </div>
-              <div class="crt-card-info">
-                <h2 class="text-upper">Ola Lowe</h2>
-                <p class="text-muted">Data scientist | Analyzer</p>
-                <ul class="crt-social clear-list">
-                  <li>
-                    <a><span class="crt-icon crt-icon-facebook"></span></a>
-                  </li>
-                  <li>
-                    <a><span class="crt-icon crt-icon-twitter"></span></a>
-                  </li>
-                  <li>
-                    <a><span class="crt-icon crt-icon-google-plus"></span></a>
-                  </li>
-                  <li>
-                    <a><span class="crt-icon crt-icon-instagram"></span></a>
-                  </li>
-                  <li>
-                    <a><span class="crt-icon crt-icon-pinterest"></span></a>
-                  </li>
-                </ul>
-              </div>
-            </div>
-            <div class="crt-side-box-btn">
-              <a
-                class="btn btn-default btn-lg btn-block btn-thin btn-upper"
-                href="#"
-                >Download Resume</a
-              >
-            </div>
-          </div>
+          <AppProfileSummary
+            :full-name="fullName"
+            :headline="profile.headline"
+            :avatar-url="profile.avatarUrl"
+            :social-media-links="profile.socialMediaLinks"
+          />
           <!-- .crt-side-box-item -->
         </div>
         <!-- #crt-side-box -->
       </div>
       <!-- #crt-side-box-wrap -->
-      <div id="crt-nav-wrap" class="hidden-sm hidden-xs">
-        <div id="crt-nav-inner">
-          <div class="crt-nav-cont">
-            <div id="crt-nav-scroll">
-              <nav id="crt-nav" class="crt-nav">
-                <ul class="clear-list">
-                  <li>
-                    <a href="index.html" data-tooltip="Home"
-                      ><img
-                        class="avatar avatar-42"
-                        src="assets/images/uploads/avatar/avatar-42x42.png"
-                        srcset="
-                          assets/images/uploads/avatar/avatar-84x84-2x.png 2x
-                        "
-                        alt=""
-                    /></a>
-                  </li>
-                  <li>
-                    <a href="experience.html" data-tooltip="Experience"
-                      ><span class="crt-icon crt-icon-experience"></span
-                    ></a>
-                  </li>
-                  <li>
-                    <a href="portfolio.html" data-tooltip="Portfolio"
-                      ><span class="crt-icon crt-icon-portfolio"></span
-                    ></a>
-                  </li>
-                  <li>
-                    <a href="testimonials.html" data-tooltip="References"
-                      ><span class="crt-icon crt-icon-references"></span
-                    ></a>
-                  </li>
-                  <li>
-                    <a href="contact.html" data-tooltip="Contact"
-                      ><span class="crt-icon crt-icon-contact"></span
-                    ></a>
-                  </li>
-                  <li>
-                    <a href="category.html" data-tooltip="Blog"
-                      ><span class="crt-icon crt-icon-blog"></span
-                    ></a>
-                  </li>
-                </ul>
-              </nav>
-            </div>
-            <div id="crt-nav-tools" class="hidden">
-              <span class="crt-icon crt-icon-dots-three-horizontal"></span>
-              <button id="crt-nav-arrow" class="clear-btn">
-                <span class="crt-icon crt-icon-chevron-thin-down"></span>
-              </button>
-            </div>
-          </div>
-          <div class="crt-nav-btm"></div>
-        </div>
-      </div>
+      <AppSideNav />
       <!-- .crt-nav-wrap -->
       <div class="crt-container-sm">
         <div class="crt-paper-layers">
           <div class="crt-paper clearfix">
-            <div class="crt-paper-cont paper-padd clear-mrg">
-              <section class="section brd-btm padd-box">
-                <div class="row">
-                  <div class="col-sm-12">
-                    <h2 class="title-lg text-upper">About Me</h2>
-                    <div class="text-box">
-                      <p>
-                        <b>Helo, I’m Ola Lowe!</b><br />
-                        I am talanted florist and decorator. I have graduated
-                        from International and cultural university of design and
-                        arts. Since first year in high school I relized that
-                        nature is most powerfull and beautiful gift in the
-                        world. I was captivated by beauty and simplicity of
-                        flowers and trees. Since then I have started to create
-                        and mastering unique and nice bouquets. My 1st
-                        masterpiece was garden of ant Ula Lowe decorated by me
-                      </p>
-                    </div>
-                  </div>
-                </div>
-                <!-- .row -->
-                <div class="row">
-                  <div class="col-sm-9">
-                    <div class="crt-share-box clearfix">
-                      <button id="btn-share" class="btn btn-share btn-upper">
-                        <span class="crt-icon crt-icon-share-alt"></span>Share
-                      </button>
-                      <!-- Uncomment to enable share buttons (works on live server) -->
-                      <!-- <script type="text/javascript"
-                                       src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5821a6c28931dc81"></script>
-                                       <div class="addthis_inline_share_toolbox"></div> -->
-                    </div>
-                    <!-- .crt-share -->
-                  </div>
-                  <div class="col-sm-3 text-right">
-                    <img
-                      src="assets/images/uploads/signature.svg"
-                      alt="signature"
-                    />
-                  </div>
-                </div>
-                <!-- .row -->
-              </section>
-              <!-- .section -->
-              <section class="section brd-btm padd-box">
-                <div class="row">
-                  <div class="col-sm-6 clear-mrg">
-                    <h2 class="title-thin text-muted">personal information</h2>
-                    <dl class="dl-horizontal clear-mrg">
-                      <dt class="text-upper">Full Name</dt>
-                      <dd>Ola Carl Lowe</dd>
-                      <dt class="text-upper">D.o.b.</dt>
-                      <dd>05 Sep 1986</dd>
-                      <dt class="text-upper">address</dt>
-                      <dd>24058, Belgium, Brussels, Liutte 27, BE</dd>
-                      <dt class="text-upper">e-mail</dt>
-                      <dd>
-                        <a href="mailto:robertsmith@company.com"
-                          >robertsmith@company.com</a
-                        >
-                      </dd>
-                      <dt class="text-upper">phone</dt>
-                      <dd>+1 256 254 84 56</dd>
-                      <dt class="text-upper">freelance</dt>
-                      <dd>Available</dd>
-                    </dl>
-                  </div>
-                  <!-- .col-sm-6 -->
-                  <div class="col-sm-6 clear-mrg">
-                    <h2 class="title-thin text-muted">languages</h2>
-                    <div
-                      class="progress-bullets crt-animate"
-                      role="progressbar"
-                      aria-valuenow="10"
-                      aria-valuemin="0"
-                      aria-valuemax="10"
-                    >
-                      <strong class="progress-title">English</strong>
-                      <span class="progress-bar">
-                        <span class="bullet fill"></span>
-                        <span class="bullet fill"></span>
-                        <span class="bullet fill"></span>
-                        <span class="bullet fill"></span>
-                        <span class="bullet fill"></span>
-                        <span class="bullet fill"></span>
-                        <span class="bullet fill"></span>
-                        <span class="bullet fill"></span>
-                        <span class="bullet fill"></span>
-                        <span class="bullet fill"></span>
-                      </span>
-                      <span class="progress-text text-muted">native</span>
-                    </div>
-                    <div
-                      class="progress-bullets crt-animate"
-                      role="progressbar"
-                      aria-valuenow="8"
-                      aria-valuemin="0"
-                      aria-valuemax="10"
-                    >
-                      <strong class="progress-title">Spanish</strong>
-                      <span class="progress-bar">
-                        <span class="bullet fill"></span>
-                        <span class="bullet fill"></span>
-                        <span class="bullet fill"></span>
-                        <span class="bullet fill"></span>
-                        <span class="bullet fill"></span>
-                        <span class="bullet fill"></span>
-                        <span class="bullet fill"></span>
-                        <span class="bullet fill"></span>
-                        <span class="bullet"></span>
-                        <span class="bullet"></span>
-                      </span>
-                      <span class="progress-text text-muted">intermediate</span>
-                    </div>
-                    <div
-                      class="progress-bullets crt-animate"
-                      role="progressbar"
-                      aria-valuenow="7"
-                      aria-valuemin="0"
-                      aria-valuemax="10"
-                    >
-                      <strong class="progress-title">Italian</strong>
-                      <span class="progress-bar">
-                        <span class="bullet fill"></span>
-                        <span class="bullet fill"></span>
-                        <span class="bullet fill"></span>
-                        <span class="bullet fill"></span>
-                        <span class="bullet fill"></span>
-                        <span class="bullet fill"></span>
-                        <span class="bullet fill"></span>
-                        <span class="bullet"></span>
-                        <span class="bullet"></span>
-                        <span class="bullet"></span>
-                      </span>
-                      <span class="progress-text text-muted">begginer</span>
-                    </div>
-                  </div>
-                  <!-- .col-sm-6 -->
-                </div>
-                <!-- .row -->
-              </section>
-              <!-- .section -->
-              <section class="section brd-btm padd-box">
-                <div class="row">
-                  <div class="col-sm-6 clear-mrg">
-                    <h2 class="title-thin text-muted">professional skills</h2>
-                    <div class="row">
-                      <div class="col-xs-4 text-center">
-                        <div
-                          class="progress-chart crt-animate"
-                          role="progressbar"
-                          aria-valuenow="90"
-                          aria-valuemin="0"
-                          aria-valuemax="100"
-                        >
-                          <div
-                            class="progress-bar"
-                            data-text="90%"
-                            data-value="0.9"
-                          ></div>
-                          <strong class="progress-title">UX Design</strong>
-                        </div>
-                      </div>
-                      <!-- .col-xs-4 -->
-                      <div class="col-xs-4 text-center">
-                        <div
-                          class="progress-chart crt-animate"
-                          role="progressbar"
-                          aria-valuenow="88"
-                          aria-valuemin="0"
-                          aria-valuemax="100"
-                        >
-                          <div
-                            class="progress-bar"
-                            data-text="81%"
-                            data-value="0.81"
-                          ></div>
-                          <strong class="progress-title">PHP & MySql</strong>
-                        </div>
-                      </div>
-                      <!-- .col-xs-4 -->
-                      <div class="col-xs-4 text-center">
-                        <div
-                          class="progress-chart crt-animate"
-                          role="progressbar"
-                          aria-valuenow="66"
-                          aria-valuemin="0"
-                          aria-valuemax="100"
-                        >
-                          <div
-                            class="progress-bar"
-                            data-text="66%"
-                            data-value="0.66"
-                          ></div>
-                          <strong class="progress-title">UI Design</strong>
-                        </div>
-                      </div>
-                      <!-- .col-xs-4 -->
-                    </div>
-                    <!-- .row -->
-                  </div>
-                  <!-- .col-sm-6 -->
-                  <div class="col-sm-6 clear-mrg">
-                    <h2 class="title-thin text-muted">professional skills</h2>
-                    <div
-                      class="progress-line crt-animate"
-                      role="progressbar"
-                      aria-valuenow="90"
-                      aria-valuemin="0"
-                      aria-valuemax="100"
-                    >
-                      <strong class="progress-title">Php & MySQL</strong>
-                      <div
-                        class="progress-bar"
-                        data-text="90%"
-                        data-value="0.9"
-                      ></div>
-                    </div>
-                    <div
-                      class="progress-line crt-animate"
-                      role="progressbar"
-                      aria-valuenow="80"
-                      aria-valuemin="0"
-                      aria-valuemax="100"
-                    >
-                      <strong class="progress-title">Javascript</strong>
-                      <div
-                        class="progress-bar"
-                        data-text="80%"
-                        data-value="0.8"
-                      ></div>
-                    </div>
-                    <div
-                      class="progress-line crt-animate"
-                      role="progressbar"
-                      aria-valuenow="80"
-                      aria-valuemin="0"
-                      aria-valuemax="100"
-                    >
-                      <strong class="progress-title">UX Design</strong>
-                      <div
-                        class="progress-bar"
-                        data-text="80%"
-                        data-value="0.8"
-                      ></div>
-                    </div>
-                    <div
-                      class="progress-line crt-animate"
-                      role="progressbar"
-                      aria-valuenow="70"
-                      aria-valuemin="0"
-                      aria-valuemax="100"
-                    >
-                      <strong class="progress-title">UI Design</strong>
-                      <div
-                        class="progress-bar"
-                        data-text="70%"
-                        data-value="0.7"
-                      ></div>
-                    </div>
-                  </div>
-                  <!-- .col-sm-6 -->
-                </div>
-                <!-- .row -->
-              </section>
-              <!-- .section -->
-              <section class="section brd-btm padd-box">
-                <div class="row">
-                  <div class="col-sm-6 clear-mrg">
-                    <h2 class="title-thin text-muted">professional skills</h2>
-                    <div
-                      class="progress-line crt-animate"
-                      role="progressbar"
-                      aria-valuenow="90"
-                      aria-valuemin="0"
-                      aria-valuemax="100"
-                    >
-                      <strong class="progress-title">Php & MySQL</strong>
-                      <div
-                        class="progress-bar"
-                        data-text="90%"
-                        data-value="0.9"
-                      ></div>
-                    </div>
-                    <div
-                      class="progress-line crt-animate"
-                      role="progressbar"
-                      aria-valuenow="80"
-                      aria-valuemin="0"
-                      aria-valuemax="100"
-                    >
-                      <strong class="progress-title">Javascript</strong>
-                      <div
-                        class="progress-bar"
-                        data-text="80%"
-                        data-value="0.8"
-                      ></div>
-                    </div>
-                    <div
-                      class="progress-line crt-animate"
-                      role="progressbar"
-                      aria-valuenow="80"
-                      aria-valuemin="0"
-                      aria-valuemax="100"
-                    >
-                      <strong class="progress-title">UX Design</strong>
-                      <div
-                        class="progress-bar"
-                        data-text="80%"
-                        data-value="0.8"
-                      ></div>
-                    </div>
-                  </div>
-                  <!-- .col-sm-6 -->
-                  <div class="col-sm-6 clear-mrg">
-                    <h2 class="title-thin text-muted">
-                      personal characteristics
-                    </h2>
-                    <ul class="styled-list clear-mrg">
-                      <li>Lake Marcelview</li>
-                      <li>New Tara</li>
-                      <li>Abbeyshire</li>
-                      <li>Kassulkechester</li>
-                    </ul>
-                  </div>
-                  <!-- .col-sm-6 -->
-                </div>
-                <!-- .row -->
-              </section>
-              <!-- .section -->
-              <section class="section brd-btm padd-box">
-                <div class="row">
-                  <div class="col-sm-12 clear-mrg">
-                    <h2 class="title-thin text-muted">interests</h2>
-                    <ul class="icon-list icon-list-col3 clearfix">
-                      <li>
-                        <span class="crt-icon crt-icon-music"></span> North
-                        Adella
-                      </li>
-                      <li>
-                        <span class="crt-icon crt-icon-blog"></span> North
-                        Adella
-                      </li>
-                      <li>
-                        <span class="crt-icon crt-icon-blog"></span> North
-                        Adella
-                      </li>
-                      <li>
-                        <span class="crt-icon crt-icon-blog"></span> North
-                        Adella
-                      </li>
-                      <li>
-                        <span class="crt-icon crt-icon-blog"></span> North
-                        Adella
-                      </li>
-                      <li>
-                        <span class="crt-icon crt-icon-music"></span> North
-                        Adella
-                      </li>
-                      <li>
-                        <span class="crt-icon crt-icon-blog"></span> North
-                        Adella
-                      </li>
-                      <li>
-                        <span class="crt-icon crt-icon-blog"></span> North
-                        Adella
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-              </section>
-              <!-- .section -->
-              <section class="section padd-box">
-                <h2 class="title-thin text-muted">Awards and Achievements</h2>
-                <div class="row">
-                  <div class="col-sm-6 clear-mrg">
-                    <div class="award-box">
-                      <figure class="award-img">
-                        <img
-                          src="assets/images/uploads/awards/award-01.png"
-                          alt=""
-                        />
-                      </figure>
-                      <h3 class="award-title">Lake Marcelview</h3>
-                      <div class="award-text text-muted clear-mrg">
-                        <p>
-                          Your brand is the core of your marketing, the central
-                          theme around your products and services. Your brand is
-                          not your Logo or your Company Name
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                  <!-- .col-sm-6 -->
-                  <div class="col-sm-6 clear-mrg">
-                    <div class="award-box">
-                      <figure class="award-img">
-                        <img
-                          src="assets/images/uploads/awards/award-02.png"
-                          alt=""
-                        />
-                      </figure>
-                      <h3 class="award-title">Lake Marcel Awards</h3>
-                      <div class="award-text text-muted clear-mrg">
-                        <p>
-                          Your brand is the core of your marketing, the central
-                          theme around your products and services.
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                  <!-- .col-sm-6 -->
-                </div>
-                <!-- .row -->
-              </section>
-              <!-- .section -->
-            </div>
+            <Nuxt />
             <!-- .crt-paper-cont -->
           </div>
           <!-- .crt-paper -->
@@ -680,8 +72,8 @@
           <div class="crt-card-avatar">
             <img
               class="avatar avatar-195"
-              src="assets/images/uploads/avatar/avatar-195x195.png"
-              srcset="assets/images/uploads/avatar/avatar-390x390-2x.png 2x"
+              src="~/assets/images/uploads/avatar/avatar-195x195.png"
+              srcset="~/assets/images/uploads/avatar/avatar-390x390.png 2x"
               width="195"
               height="195"
               alt=""
@@ -734,7 +126,7 @@
               <li>
                 <a class="post-image" href="#">
                   <img
-                    src="assets/images/uploads/blog/img-70x70-01.png"
+                    src="~/assets/images/uploads/blog/img-70x70-01.png"
                     alt=""
                   />
                 </a>
@@ -751,7 +143,7 @@
               <li>
                 <a class="post-image" href="#">
                   <img
-                    src="assets/images/uploads/blog/img-70x70-02.jpg"
+                    src="~/assets/images/uploads/blog/img-70x70-02.jpg"
                     alt=""
                   />
                 </a>
@@ -768,7 +160,7 @@
               <li>
                 <a class="post-image" href="#">
                   <img
-                    src="assets/images/uploads/blog/img-70x70-03.png"
+                    src="~/assets/images/uploads/blog/img-70x70-03.png"
                     alt=""
                   />
                 </a>
@@ -848,14 +240,7 @@
       <!-- #crt-sidebar-inner -->
     </div>
     <!-- #crt-sidebar -->
-    <footer id="crt-footer" class="crt-container-lg">
-      <div class="crt-container">
-        <div class="crt-container-sm clear-mrg text-center">
-          <p>Ola Resume @ All Rights Reserved 2016</p>
-        </div>
-      </div>
-      <!-- .crt-container -->
-    </footer>
+    <AppFooter />
     <!-- #crt-footer -->
     <svg
       id="crt-bg-shape-1"
@@ -877,12 +262,17 @@
 </template>
 
 <script lang="ts">
+import { mapGetters } from 'vuex'
+
 export default {
   head: {
     htmlAttrs: {
       class:
         'crt crt-side-box-on crt-nav-on crt-nav-type2 crt-main-nav-on crt-sidebar-on crt-layers-1 desktop crt-desktop',
     },
+  },
+  computed: {
+    ...mapGetters(['profile', 'fullName']),
   },
 }
 </script>
