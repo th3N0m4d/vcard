@@ -21,23 +21,6 @@ export default {
         href: 'https://fonts.googleapis.com/css?family=Quicksand:400,700',
       },
     ],
-    script: [
-      {
-        src: 'https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js',
-        body: true,
-      },
-      {
-        src: 'https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js',
-      },
-      {
-        src: '/js/plugins.min.js',
-        body: true,
-      },
-      {
-        src: '/js/theme.min.js',
-        body: true,
-      },
-    ],
   },
 
   // Global CSS: https://go.nuxtjs.dev/config-css

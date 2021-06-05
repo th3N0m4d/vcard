@@ -22,4 +22,5 @@ export const getters = {
   topSkills: (state: State) =>
     state.topSkills.sort((a, b) => b.level - a.level),
   skills: (state: State) => state.skills.sort((a, b) => b.level - a.level),
+  workHistory: (state: State) => state.workHistory,
 }

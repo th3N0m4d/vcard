@@ -46,8 +46,8 @@ export interface Certificate {
 }
 
 export interface History {
-  startDate: Date
-  endDate?: Date
+  startDate: string
+  endDate?: string
   title: string
   logoUrl: string
   name: string

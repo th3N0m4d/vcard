@@ -1,7 +1,8 @@
 import { Profile } from '@/models'
 import dayjs from 'dayjs'
 
-const dayMonthYear = (value: string) => dayjs(value).format('DD/MM/YYYY')
+const formatDate = (isoDate: string, dateFormat: string) =>
+  isoDate && dayjs(isoDate).format(dateFormat)
 
 const fullName = (profile: Pick<Profile, 'firstName' | 'lastName'>) =>
   `${profile.firstName} ${profile.lastName}`
@@ -40,9 +41,9 @@ const ieltsBandScale = (level: number) => {
 
 export default {
   checkAvailability,
-  dayMonthYear,
   fullName,
   ieltsBandScale,
   mailTo,
   tel,
+  formatDate,
 }

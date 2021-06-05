@@ -1,4 +1,10 @@
-import { Interest, PersonalInformation, Profile, Skill } from '@/models'
+import {
+  Interest,
+  PersonalInformation,
+  Profile,
+  Skill,
+  WorkHistory,
+} from '@/models'
 import { defaultState } from './defaultState'
 
 export interface State {
@@ -9,6 +15,7 @@ export interface State {
   isSideBarOpen: boolean
   skills: Skill[]
   topSkills: Skill[]
+  workHistory: WorkHistory[]
 }
 
 export default () => defaultState
