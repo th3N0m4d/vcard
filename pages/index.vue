@@ -270,7 +270,7 @@
       <!-- .row -->
     </section>
     <!-- .section -->
-    <section class="section brd-btm padd-box">
+    <section class="section padd-box">
       <div class="row">
         <div class="col-sm-12 clear-mrg">
           <h2 class="title-thin text-muted">interests</h2>
@@ -281,44 +281,6 @@
           </ul>
         </div>
       </div>
-    </section>
-    <!-- .section -->
-    <section class="section padd-box">
-      <h2 class="title-thin text-muted">Awards and Achievements</h2>
-      <div class="row">
-        <div class="col-sm-6 clear-mrg">
-          <div class="award-box">
-            <figure class="award-img">
-              <img src="~/assets/images/uploads/awards/award-01.png" alt="" />
-            </figure>
-            <h3 class="award-title">Lake Marcelview</h3>
-            <div class="award-text text-muted clear-mrg">
-              <p>
-                Your brand is the core of your marketing, the central theme
-                around your products and services. Your brand is not your Logo
-                or your Company Name
-              </p>
-            </div>
-          </div>
-        </div>
-        <!-- .col-sm-6 -->
-        <div class="col-sm-6 clear-mrg">
-          <div class="award-box">
-            <figure class="award-img">
-              <img src="~/assets/images/uploads/awards/award-02.png" alt="" />
-            </figure>
-            <h3 class="award-title">Lake Marcel Awards</h3>
-            <div class="award-text text-muted clear-mrg">
-              <p>
-                Your brand is the core of your marketing, the central theme
-                around your products and services.
-              </p>
-            </div>
-          </div>
-        </div>
-        <!-- .col-sm-6 -->
-      </div>
-      <!-- .row -->
     </section>
     <!-- .section -->
   </div>

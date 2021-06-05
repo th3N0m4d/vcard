@@ -24,6 +24,18 @@ export default {
     script: [
       {
         src: 'https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js',
+        body: true,
+      },
+      {
+        src: 'https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js',
+      },
+      {
+        src: '/js/plugins.min.js',
+        body: true,
+      },
+      {
+        src: '/js/theme.min.js',
+        body: true,
       },
     ],
   },
@@ -33,18 +45,6 @@ export default {
     '@/assets/fonts/icomoon/style.css',
     '@/assets/css/plugins.min.css',
     '@/assets/css/style.css',
-  ],
-
-  script: [
-    {
-      src: '@/assets/js/plugins.min.js',
-    },
-    {
-      src: '@/assets/js/theme.min.js',
-    },
-    {
-      src: '@/assets/js/vendor/modernizr-3.3.1.min.js',
-    },
   ],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins

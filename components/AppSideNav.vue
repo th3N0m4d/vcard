@@ -14,31 +14,26 @@
                     alt=""
                 /></NuxtLink>
               </li>
-              <!-- <li>
-                <a href="experience.html" data-tooltip="Experience"
+              <li>
+                <NuxtLink to="/experience" data-tooltip="Experience"
                   ><span class="crt-icon crt-icon-experience"></span
-                ></a>
+                ></NuxtLink>
               </li>
               <li>
-                <a href="portfolio.html" data-tooltip="Portfolio"
-                  ><span class="crt-icon crt-icon-portfolio"></span
-                ></a>
-              </li>
-              <li>
-                <a href="testimonials.html" data-tooltip="References"
+                <NuxtLink to="/references" data-tooltip="References"
                   ><span class="crt-icon crt-icon-references"></span
-                ></a>
+                ></NuxtLink>
               </li>
               <li>
-                <a href="contact.html" data-tooltip="Contact"
+                <NuxtLink to="/contact" data-tooltip="Contact"
                   ><span class="crt-icon crt-icon-contact"></span
-                ></a>
+                ></NuxtLink>
               </li>
               <li>
-                <a href="category.html" data-tooltip="Blog"
+                <NuxtLink to="/blog" data-tooltip="Blog"
                   ><span class="crt-icon crt-icon-blog"></span
-                ></a>
-              </li> -->
+                ></NuxtLink>
+              </li>
             </ul>
           </nav>
         </div>

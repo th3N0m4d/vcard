@@ -32,7 +32,7 @@
 </template>
 
 <script lang="ts">
-import { Social } from '~/models'
+import { Social } from '@/models'
 
 export default {
   props: {
