@@ -24,7 +24,10 @@
       </div>
     </div>
     <div class="crt-side-box-btn">
-      <a class="btn btn-default btn-lg btn-block btn-thin btn-upper" href="#"
+      <a
+        class="btn btn-default btn-lg btn-block btn-thin btn-upper"
+        href="images/resume.pdf"
+        download
         >Download Resume</a
       >
     </div>
