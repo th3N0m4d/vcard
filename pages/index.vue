@@ -21,8 +21,8 @@
           <dl class="dl-horizontal clear-mrg">
             <dt class="text-upper">Full Name</dt>
             <dd>{{ fullName }}</dd>
-            <dt class="text-upper">D.o.b.</dt>
-            <dd>{{ personalInfo.dateOfBirth }}</dd>
+            <dt class="text-upper">Date of birth</dt>
+            <dd>{{ personalInfo.dateOfBirth | dayMonthYear }}</dd>
             <dt class="text-upper">address</dt>
             <dd>{{ address }}</dd>
             <dt class="text-upper">e-mail</dt>
@@ -325,10 +325,15 @@
 </template>
 
 <script lang="ts">
-import Vue from 'vue'
+import dayjs from 'dayjs'
 import { mapGetters } from 'vuex'
 
-export default Vue.extend({
+export default {
+  filters: {
+    dayMonthYear(value: string) {
+      return dayjs(value).format('DD/MM/YYYY')
+    },
+  },
   computed: {
     ...mapGetters([
       'personalInfo',
@@ -341,5 +346,5 @@ export default Vue.extend({
       'interests',
     ]),
   },
-})
+}
 </script>
