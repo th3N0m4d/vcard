@@ -21,9 +21,9 @@
         </time>
         <h3>{{ item.title }}</h3>
 
-        <div class="education-logo">
+        <div class="education-logo" style="width: 20%">
           <img
-            src="assets/images/uploads/experience/logo-audio-jungle.png"
+            :src="require(`~/assets/images/company-logos/${item.logoUrl}`)"
             alt=""
           />
         </div>
