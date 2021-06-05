@@ -22,7 +22,11 @@
             <dt class="text-upper">Full Name</dt>
             <dd>{{ fullName }}</dd>
             <dt class="text-upper">Date of birth</dt>
-            <dd>{{ personalInfo.dateOfBirth | dayMonthYear }}</dd>
+            <dd>
+              {{
+                personalInfo.dateOfBirth | formatDate(DateFormat.dayMonthYear)
+              }}
+            </dd>
             <dt class="text-upper">address</dt>
             <dd>{{ address }}</dd>
             <dt class="text-upper">e-mail</dt>
@@ -102,9 +106,15 @@
 <script lang="ts">
 import { mapGetters } from 'vuex'
 import filters from '@/filters'
+import { DateFormat } from '@/constants'
 
 export default {
   filters: { ...filters },
+  data() {
+    return {
+      DateFormat,
+    }
+  },
   computed: {
     ...mapGetters([
       'personalInfo',
