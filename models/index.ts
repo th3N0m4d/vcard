@@ -58,6 +58,11 @@ export interface Skill {
   level?: number
 }
 
+export interface Interest {
+  name: string
+  icon: string
+}
+
 export interface WorkHistory extends History {
   description: string
 }

@@ -3,7 +3,7 @@
     <section class="section brd-btm padd-box">
       <div class="row">
         <div class="col-sm-12">
-          <AppPageTitle>About me</AppPageTitle>
+          <app-page-title>About me</app-page-title>
           <div class="text-box">
             <p>
               {{ profile.aboutMe }}
@@ -40,72 +40,12 @@
         <!-- .col-sm-6 -->
         <div class="col-sm-6 clear-mrg">
           <h2 class="title-thin text-muted">languages</h2>
-          <div
-            class="progress-bullets crt-animate"
-            role="progressbar"
-            aria-valuenow="10"
-            aria-valuemin="0"
-            aria-valuemax="10"
-          >
-            <strong class="progress-title">English</strong>
-            <span class="progress-bar">
-              <span class="bullet fill"></span>
-              <span class="bullet fill"></span>
-              <span class="bullet fill"></span>
-              <span class="bullet fill"></span>
-              <span class="bullet fill"></span>
-              <span class="bullet fill"></span>
-              <span class="bullet fill"></span>
-              <span class="bullet fill"></span>
-              <span class="bullet fill"></span>
-              <span class="bullet fill"></span>
-            </span>
-            <span class="progress-text text-muted">native</span>
-          </div>
-          <div
-            class="progress-bullets crt-animate"
-            role="progressbar"
-            aria-valuenow="8"
-            aria-valuemin="0"
-            aria-valuemax="10"
-          >
-            <strong class="progress-title">Spanish</strong>
-            <span class="progress-bar">
-              <span class="bullet fill"></span>
-              <span class="bullet fill"></span>
-              <span class="bullet fill"></span>
-              <span class="bullet fill"></span>
-              <span class="bullet fill"></span>
-              <span class="bullet fill"></span>
-              <span class="bullet fill"></span>
-              <span class="bullet fill"></span>
-              <span class="bullet"></span>
-              <span class="bullet"></span>
-            </span>
-            <span class="progress-text text-muted">intermediate</span>
-          </div>
-          <div
-            class="progress-bullets crt-animate"
-            role="progressbar"
-            aria-valuenow="7"
-            aria-valuemin="0"
-            aria-valuemax="10"
-          >
-            <strong class="progress-title">Italian</strong>
-            <span class="progress-bar">
-              <span class="bullet fill"></span>
-              <span class="bullet fill"></span>
-              <span class="bullet fill"></span>
-              <span class="bullet fill"></span>
-              <span class="bullet fill"></span>
-              <span class="bullet fill"></span>
-              <span class="bullet fill"></span>
-              <span class="bullet"></span>
-              <span class="bullet"></span>
-              <span class="bullet"></span>
-            </span>
-            <span class="progress-text text-muted">begginer</span>
-          </div>
+          <app-language-level
+            v-for="item in languages"
+            :key="item.name"
+            :current-value="item.level"
+            :title="item.name"
+          />
         </div>
         <!-- .col-sm-6 -->
       </div>
@@ -115,168 +55,41 @@
     <section class="section brd-btm padd-box">
       <div class="row">
         <div class="col-sm-6 clear-mrg">
-          <h2 class="title-thin text-muted">professional skills</h2>
+          <h2 class="title-thin text-muted">top skills</h2>
           <div class="row">
-            <div class="col-xs-4 text-center">
-              <div
-                class="progress-chart crt-animate"
-                role="progressbar"
-                aria-valuenow="90"
-                aria-valuemin="0"
-                aria-valuemax="100"
-              >
-                <div
-                  class="progress-bar"
-                  data-text="90%"
-                  data-value="0.9"
-                ></div>
-                <strong class="progress-title">UX Design</strong>
-              </div>
+            <div
+              v-for="(skill, index) of topSkills"
+              :key="index"
+              class="col-xs-4 text-center"
+            >
+              <progress-circle
+                :title="skill.name"
+                :current-value="skill.level"
+              ></progress-circle>
             </div>
-            <!-- .col-xs-4 -->
-            <div class="col-xs-4 text-center">
-              <div
-                class="progress-chart crt-animate"
-                role="progressbar"
-                aria-valuenow="88"
-                aria-valuemin="0"
-                aria-valuemax="100"
-              >
-                <div
-                  class="progress-bar"
-                  data-text="81%"
-                  data-value="0.81"
-                ></div>
-                <strong class="progress-title">PHP & MySql</strong>
-              </div>
-            </div>
-            <!-- .col-xs-4 -->
-            <div class="col-xs-4 text-center">
-              <div
-                class="progress-chart crt-animate"
-                role="progressbar"
-                aria-valuenow="66"
-                aria-valuemin="0"
-                aria-valuemax="100"
-              >
-                <div
-                  class="progress-bar"
-                  data-text="66%"
-                  data-value="0.66"
-                ></div>
-                <strong class="progress-title">UI Design</strong>
-              </div>
-            </div>
-            <!-- .col-xs-4 -->
           </div>
-          <!-- .row -->
         </div>
-        <!-- .col-sm-6 -->
+
         <div class="col-sm-6 clear-mrg">
           <h2 class="title-thin text-muted">professional skills</h2>
-          <div
-            class="progress-line crt-animate"
-            role="progressbar"
-            aria-valuenow="90"
-            aria-valuemin="0"
-            aria-valuemax="100"
-          >
-            <strong class="progress-title">Php & MySQL</strong>
-            <div class="progress-bar" data-text="90%" data-value="0.9"></div>
-          </div>
-          <div
-            class="progress-line crt-animate"
-            role="progressbar"
-            aria-valuenow="80"
-            aria-valuemin="0"
-            aria-valuemax="100"
-          >
-            <strong class="progress-title">Javascript</strong>
-            <div class="progress-bar" data-text="80%" data-value="0.8"></div>
-          </div>
-          <div
-            class="progress-line crt-animate"
-            role="progressbar"
-            aria-valuenow="80"
-            aria-valuemin="0"
-            aria-valuemax="100"
-          >
-            <strong class="progress-title">UX Design</strong>
-            <div class="progress-bar" data-text="80%" data-value="0.8"></div>
-          </div>
-          <div
-            class="progress-line crt-animate"
-            role="progressbar"
-            aria-valuenow="70"
-            aria-valuemin="0"
-            aria-valuemax="100"
-          >
-            <strong class="progress-title">UI Design</strong>
-            <div class="progress-bar" data-text="70%" data-value="0.7"></div>
-          </div>
+          <progress-line
+            v-for="(skill, index) of skills"
+            :key="index"
+            :current-value="skill.level"
+            :title="skill.name"
+          ></progress-line>
         </div>
-        <!-- .col-sm-6 -->
       </div>
-      <!-- .row -->
     </section>
-    <!-- .section -->
-    <section class="section brd-btm padd-box">
-      <div class="row">
-        <div class="col-sm-6 clear-mrg">
-          <h2 class="title-thin text-muted">professional skills</h2>
-          <div
-            class="progress-line crt-animate"
-            role="progressbar"
-            aria-valuenow="90"
-            aria-valuemin="0"
-            aria-valuemax="100"
-          >
-            <strong class="progress-title">Php & MySQL</strong>
-            <div class="progress-bar" data-text="90%" data-value="0.9"></div>
-          </div>
-          <div
-            class="progress-line crt-animate"
-            role="progressbar"
-            aria-valuenow="80"
-            aria-valuemin="0"
-            aria-valuemax="100"
-          >
-            <strong class="progress-title">Javascript</strong>
-            <div class="progress-bar" data-text="80%" data-value="0.8"></div>
-          </div>
-          <div
-            class="progress-line crt-animate"
-            role="progressbar"
-            aria-valuenow="80"
-            aria-valuemin="0"
-            aria-valuemax="100"
-          >
-            <strong class="progress-title">UX Design</strong>
-            <div class="progress-bar" data-text="80%" data-value="0.8"></div>
-          </div>
-        </div>
-        <!-- .col-sm-6 -->
-        <div class="col-sm-6 clear-mrg">
-          <h2 class="title-thin text-muted">personal characteristics</h2>
-          <ul class="styled-list clear-mrg">
-            <li>Lake Marcelview</li>
-            <li>New Tara</li>
-            <li>Abbeyshire</li>
-            <li>Kassulkechester</li>
-          </ul>
-        </div>
-        <!-- .col-sm-6 -->
-      </div>
-      <!-- .row -->
-    </section>
+
     <!-- .section -->
     <section class="section padd-box">
       <div class="row">
         <div class="col-sm-12 clear-mrg">
           <h2 class="title-thin text-muted">interests</h2>
           <ul class="icon-list icon-list-col3 clearfix">
-            <li v-for="item in interests" :key="item">
-              <span class="crt-icon crt-icon-heart"></span> {{ item }}
+            <li v-for="(item, index) in interests" :key="index">
+              <span :class="item.icon"></span> {{ item.name }}
             </li>
           </ul>
         </div>
@@ -287,15 +100,11 @@
 </template>
 
 <script lang="ts">
-import dayjs from 'dayjs'
 import { mapGetters } from 'vuex'
+import filters from '@/filters'
 
 export default {
-  filters: {
-    dayMonthYear(value: string) {
-      return dayjs(value).format('DD/MM/YYYY')
-    },
-  },
+  filters: { ...filters },
   computed: {
     ...mapGetters([
       'personalInfo',
@@ -306,6 +115,9 @@ export default {
       'tel',
       'workAvailability',
       'interests',
+      'languages',
+      'skills',
+      'topSkills',
     ]),
   },
 }

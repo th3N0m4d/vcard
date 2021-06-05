@@ -66,15 +66,52 @@ export const defaultState: State = {
     },
     {
       name: 'Polish',
-      level: 3,
+      level: 5,
     },
   ],
   interests: [
-    'Traveling',
-    'Playing guitar',
-    'Blogging',
-    'Books',
-    'Biking',
-    'Hard Sciences',
+    { name: 'Traveling', icon: 'crt-icon crt-icon-map' },
+    { name: 'Playing guitar', icon: 'crt-icon crt-icon-music' },
+    { name: 'Blogging', icon: 'crt-icon crt-icon-pencil' },
+    { name: 'Books', icon: 'crt-icon crt-icon-book' },
+    { name: 'Biking', icon: 'crt-icon crt-icon-heart' },
+    { name: 'Hard Sciences', icon: 'crt-icon crt-icon-flask' },
+  ],
+  isSideBarOpen: false,
+  skills: [
+    {
+      name: 'VueJs',
+      level: 9,
+    },
+    {
+      name: 'React',
+      level: 9,
+    },
+    {
+      name: 'Angular',
+      level: 9,
+    },
+    {
+      name: 'Rxjs',
+      level: 7,
+    },
+    {
+      name: 'Nuxtjs',
+      level: 7,
+    },
+  ],
+  topSkills: [
+    {
+      name: 'Javascript',
+      level: 9,
+    },
+    {
+      name: 'Html5',
+      level: 8,
+    },
+    {
+      name: 'CSS',
+      level: 7,
+    },
   ],
 }

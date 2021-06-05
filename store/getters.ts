@@ -18,4 +18,8 @@ export const getters = {
     return state.profile.isAvailableForWork ? 'Available' : 'Not at this time'
   },
   interests: (state: State) => state.interests,
+  languages: (state: State) => state.languages,
+  topSkills: (state: State) =>
+    state.topSkills.sort((a, b) => b.level - a.level),
+  skills: (state: State) => state.skills.sort((a, b) => b.level - a.level),
 }
