@@ -64,7 +64,7 @@
     <nav id="crt-nav-sm" class="crt-nav hidden-lg hidden-md">
       <ul class="clear-list">
         <li>
-          <NuxtLink to="/index" data-tooltip="Home"
+          <NuxtLink to="/" data-tooltip="Home"
             ><img
               class="avatar avatar-42"
               src="~/assets/images/uploads/avatar/avatar-42x42.png"
