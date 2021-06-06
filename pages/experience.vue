@@ -13,19 +13,13 @@
 import { DateFormat } from '@/constants'
 import Vue from 'vue'
 import filters from '@/filters'
-import dayjs from 'dayjs'
-import { WorkHistory } from '@/models'
-
-const compareDates = (a: WorkHistory, b: WorkHistory) => {
-  return dayjs(a.startDate).isBefore(b.startDate) ? 1 : -1
-}
 
 export default Vue.extend({
   filters: { ...filters },
   async asyncData({ $content }: any) {
-    const payload = await $content('work-history').fetch()
-
-    const workHistory = payload.sort(compareDates)
+    const workHistory = await $content('work-history')
+      .sortBy('startDate', 'desc')
+      .fetch()
 
     return {
       workHistory,
