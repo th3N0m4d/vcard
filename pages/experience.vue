@@ -1,63 +1,40 @@
 <template>
   <div class="crt-paper-cont paper-padd clear-mrg">
     <app-page-title>work experience</app-page-title>
-    <div class="education">
-      <div
-        v-for="(item, index) in workHistory"
-        :key="index"
-        class="education-box"
-      >
-        <time class="education-date" datetime="2014-01T2016-03">
-          <span
-            >{{ item.startDate | formatDate(DateFormat.shortMonthName) }}
-            <strong class="text-upper">{{
-              item.startDate | formatDate(DateFormat.year)
-            }}</strong>
-            - {{ item.endDate | formatDate(DateFormat.shortMonthName) }}
-            <strong>{{
-              item.endDate | formatDate(DateFormat.year)
-            }}</strong></span
-          >
-        </time>
-        <h3>{{ item.title }}</h3>
-
-        <div class="education-logo" style="width: 20%">
-          <img
-            :src="require(`~/assets/images/company-logos/${item.logoUrl}`)"
-            alt=""
-          />
-        </div>
-        <span class="education-company">{{ item.name }}</span>
-
-        <p>
-          <vue-markdown>
-            {{ item.description }}
-          </vue-markdown>
-        </p>
-      </div>
-    </div>
+    <app-position
+      v-for="(position, index) in workHistory"
+      :key="index"
+      :position="position"
+    />
   </div>
 </template>
 
 <script lang="ts">
-import { mapGetters } from 'vuex'
 import { DateFormat } from '@/constants'
 import Vue from 'vue'
 import filters from '@/filters'
-import VueMarkdown from 'vue-markdown'
+import dayjs from 'dayjs'
+import { WorkHistory } from '@/models'
+
+const compareDates = (a: WorkHistory, b: WorkHistory) => {
+  return dayjs(a.startDate).isBefore(b.startDate) ? 1 : -1
+}
 
 export default Vue.extend({
-  components: {
-    VueMarkdown,
-  },
   filters: { ...filters },
+  async asyncData({ $content }: any) {
+    const payload = await $content('work-history').fetch()
+
+    const workHistory = payload.sort(compareDates)
+
+    return {
+      workHistory,
+    }
+  },
   data() {
     return {
       DateFormat,
     }
-  },
-  computed: {
-    ...mapGetters(['workHistory']),
   },
 })
 </script>

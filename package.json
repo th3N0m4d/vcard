@@ -13,6 +13,7 @@
     "test": "jest"
   },
   "dependencies": {
+    "@nuxt/content": "^1.14.0",
     "@nuxtjs/pwa": "^3.3.5",
     "@types/progressbar.js": "^1.1.0",
     "babel-runtime": "^6.26.0",
