@@ -16,12 +16,10 @@
     "@nuxt/content": "^1.14.0",
     "@nuxtjs/pwa": "^3.3.5",
     "@types/progressbar.js": "^1.1.0",
-    "babel-runtime": "^6.26.0",
     "core-js": "^3.9.1",
     "dayjs": "^1.10.5",
     "nuxt": "^2.15.3",
-    "progressbar.js": "^1.1.0",
-    "vue-markdown": "^2.2.4"
+    "progressbar.js": "^1.1.0"
   },
   "devDependencies": {
     "@commitlint/cli": "^12.0.1",
@@ -30,7 +28,6 @@
     "@nuxt/typescript-build": "^2.1.0",
     "@nuxtjs/eslint-config-typescript": "^6.0.0",
     "@nuxtjs/eslint-module": "^3.0.2",
-    "@types/vue-markdown": "^2.2.1",
     "babel-eslint": "^10.1.0",
     "eslint": "^7.22.0",
     "eslint-config-prettier": "^8.1.0",

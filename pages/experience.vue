@@ -17,7 +17,7 @@ import filters from '@/filters'
 export default Vue.extend({
   filters: { ...filters },
   async asyncData({ $content }: any) {
-    const workHistory = await $content('work-history')
+    const workHistory = await $content('experience')
       .sortBy('startDate', 'desc')
       .fetch()
 

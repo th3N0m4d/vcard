@@ -19,7 +19,7 @@ Supported mainly a back-end system for our booking flight app. This system is wr
 
 ### Code Assessment (still at ECOM)
 
-Helped raise awareness about several quality issues regarding a project which is going to be handed over to us by a third party firm.
+Helped raise awareness about several quality issues regarding a project which is going to be handed over to us by a third-party firm.
 
 Showed actual code from the repository with its corresponding anti-pattern. These anti-patterns were grouped into three categories: programming, methodological, and architectural anti-patterns.
 
@@ -35,4 +35,4 @@ As of this moment, I'm implementing a new module that will allow our users to se
 
 ### Blog posts
 
-Within the span of two months of joining the company, authored and shared articles about emerging technologies, such as: Testing Firebase Cloud Functions (three-part series) - Authentication with VueJs and Firebase - Automated E2E tests with Postman
+Within the span of two months of joining the company, authored and shared articles about emerging technologies, such as Testing Firebase Cloud Functions (three-part series) - Authentication with VueJs and Firebase - Automated E2E tests with Postman
