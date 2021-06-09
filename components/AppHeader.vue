@@ -17,6 +17,7 @@
               <nav id="crt-main-nav">
                 <ul class="clear-list">
                   <li><NuxtLink to="/">home</NuxtLink></li>
+                  <li><NuxtLink to="/experience">experience</NuxtLink></li>
                   <!-- <li><a href="portfolio.html">portfolio</a></li>
                   <li class="has-sub-menu">
                     <a href="#">pages</a>
@@ -53,9 +54,9 @@
             </div>
           </div>
           <div id="crt-head-col3" class="crt-head-col text-right">
-            <button id="crt-sidebar-btn" class="btn btn-icon btn-shade">
+            <!-- <button id="crt-sidebar-btn" class="btn btn-icon btn-shade">
               <span class="crt-icon crt-icon-side-bar-icon"></span>
-            </button>
+            </button> -->
           </div>
         </div>
       </div>
@@ -77,7 +78,7 @@
             ><span class="crt-icon crt-icon-experience"></span
           ></NuxtLink>
         </li>
-        <li>
+        <!-- <li>
           <NuxtLink to="/portfolio" data-tooltip="Portfolio"
             ><span class="crt-icon crt-icon-portfolio"></span
           ></NuxtLink>
@@ -96,7 +97,7 @@
           <NuxtLink to="/blog" data-tooltip="Blog"
             ><span class="crt-icon crt-icon-blog"></span
           ></NuxtLink>
-        </li>
+        </li> -->
       </ul>
     </nav>
     <!-- #crt-nav-sm -->

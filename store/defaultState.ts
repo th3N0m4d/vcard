@@ -9,7 +9,7 @@ export const defaultState: State = {
     isAvailableForWork: true,
     avatarUrl:
       'https://s.gravatar.com/avatar/ee7632fa6bd3b38b930a0f9fbdff7e74?s=195',
-    headline: 'Fullstack Frontend Engineer',
+    headline: 'Fullstack Javascript Engineer',
     socialMediaLinks: [
       {
         id: '1',
@@ -53,7 +53,7 @@ export const defaultState: State = {
       lng: 17.047957998200125,
     },
     emailAddress: 'edielton.dantas@hotmail.com',
-    phoneNumber: '48 662 868 789',
+    phoneNumber: '+48 662 868 789',
   },
   languages: [
     {
@@ -66,7 +66,7 @@ export const defaultState: State = {
     },
     {
       name: 'Polish',
-      level: 5,
+      level: 3,
     },
   ],
   interests: [

@@ -7,8 +7,8 @@ export const getters = {
     `${state.profile.firstName} ${state.profile.lastName}`,
 
   address: (state: State) => {
-    const { location, city, country } = state.personalInfo
-    return `${location}, ${city}, ${country}`
+    const { city, country } = state.personalInfo
+    return `${city}, ${country}`
   },
   mailTo: (state: State) => {
     return `mailto:${state.personalInfo.emailAddress}`

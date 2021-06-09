@@ -21,12 +21,12 @@
           <dl class="dl-horizontal clear-mrg">
             <dt class="text-upper">Full Name</dt>
             <dd>{{ fullName }}</dd>
-            <dt class="text-upper">Date of birth</dt>
+            <!-- <dt class="text-upper">Date of birth</dt>
             <dd>
               {{
                 personalInfo.dateOfBirth | formatDate(DateFormat.dayMonthYear)
               }}
-            </dd>
+            </dd> -->
             <dt class="text-upper">address</dt>
             <dd>{{ address }}</dd>
             <dt class="text-upper">e-mail</dt>

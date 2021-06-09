@@ -6,4 +6,7 @@ const toggleSideBar = ({ commit }: { commit: Function }) => [
 
 export default {
   toggleSideBar,
+  async nuxtServerInit({ dispatch }: any) {
+    await dispatch('core/load')
+  },
 }

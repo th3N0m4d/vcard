@@ -19,7 +19,7 @@
                   ><span class="crt-icon crt-icon-experience"></span
                 ></NuxtLink>
               </li>
-              <li>
+              <!-- <li>
                 <NuxtLink to="/references" data-tooltip="References"
                   ><span class="crt-icon crt-icon-references"></span
                 ></NuxtLink>
@@ -33,7 +33,7 @@
                 <NuxtLink to="/blog" data-tooltip="Blog"
                   ><span class="crt-icon crt-icon-blog"></span
                 ></NuxtLink>
-              </li>
+              </li> -->
             </ul>
           </nav>
         </div>
