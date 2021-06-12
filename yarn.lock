@@ -1575,6 +1575,11 @@
   resolved "https://registry.yarnpkg.com/@polka/url/-/url-1.0.0-next.15.tgz#6a9d143f7f4f49db2d782f9e1c8839a29b43ae23"
   integrity sha512-15spi3V28QdevleWBNXE4pIls3nFZmBbUGrW9IVPwiQczuSb9n76TCB4bsk8TSel+I1OkHEdPhu5QKMfY6rQHA==
 
+"@smartweb/vue-flash-message@^0.6.10":
+  version "0.6.10"
+  resolved "https://registry.yarnpkg.com/@smartweb/vue-flash-message/-/vue-flash-message-0.6.10.tgz#b091d74adf55e1e67ea0debcbe14a92f9440b7a6"
+  integrity sha512-ceDUUzXI6FDscev36kZQvc2BO+MayOt6uJ2HSh9zoOkfa0PVIhmaoB56InlTTsK7MmlSIvPJpRB+Habdx3MtNw==
+
 "@types/anymatch@*":
   version "3.0.0"
   resolved "https://registry.yarnpkg.com/@types/anymatch/-/anymatch-3.0.0.tgz#c95ff14401dbb2869913afac3935af4ad0d37f1a"

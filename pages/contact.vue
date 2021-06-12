@@ -84,6 +84,8 @@
     <!-- .padd-box -->
 
     <!-- TODO: Add map component -->
+
+    <flash-message :position="'right bottom'"></flash-message>
   </div>
 </template>
 
@@ -92,18 +94,18 @@
 import Vue from 'vue'
 import { required, email } from 'vuelidate/lib/validators'
 
-
+const initialState = {
+      author: null,
+      email: null,
+      subject: null,
+      message: null,
+    }
 
 export default Vue.extend({
   data() {
-    return {
-      author: '',
-      email: '',
-      subject: '',
-      message: '',
-    }
+    return initialState
   },
-  validations: {
+  validations: () => ({
     author: {
       required
     },
@@ -117,14 +119,26 @@ export default Vue.extend({
     message: {
       required
     }
-  },
+  }),
   methods: {
     handleSubmit() {
       this.$v.$touch()
-      if (this.$v.$invalid) {
+      if (!this.$v.$invalid) {
         // TODO: Submit form
+        this.showFlashMessage()
+        this.resetForm()
       }
     },
+    showFlashMessage(){
+      this.flashMessage.success({
+        title: 'Your message has been successfully sent!',
+            message: 'Thanks for your message! I\'ll get back to you as soon as I can :)'
+        });
+    },
+    resetForm(){
+      Object.assign(this.$data, initialState)
+      this.$v.$reset()
+    }
   },
 })
 </script>
