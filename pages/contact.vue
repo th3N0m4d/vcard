@@ -21,7 +21,7 @@
                 v-model="author"
                 class="form-item"
                 :class="{ error: $v.author.$error }"
-                name="crtName"
+                name="name"
                 type="text"
               />
             </div>
@@ -37,7 +37,7 @@
                 class="form-item"
                 :class="{ error: $v.email.$error }"
                 type="email"
-                name="crtEmail"
+                name="email"
               />
             </div>
           </div>
@@ -52,7 +52,7 @@
                 class="form-item"
                 :class="{ error: $v.subject.$error }"
                 type="text"
-                name="crtSubject"
+                name="subject"
               />
             </div>
           </div>
@@ -66,7 +66,7 @@
                 v-model="message"
                 class="form-item"
                 :class="{ error: $v.message.$error }"
-                name="crtMessage"
+                name="message"
               ></textarea>
             </div>
           </div>
@@ -102,7 +102,7 @@ const initialState = {
 
 export default Vue.extend({
   data() {
-    return initialState
+    return { ...initialState }
   },
   validations: () => ({
     author: {

@@ -83,18 +83,18 @@
           <NuxtLink to="/portfolio" data-tooltip="Portfolio"
             ><span class="crt-icon crt-icon-portfolio"></span
           ></NuxtLink>
-        </li>
-        <li>
+        </li> -->
+        <!-- <li>
           <NuxtLink to="/references" data-tooltip="References"
             ><span class="crt-icon crt-icon-references"></span
           ></NuxtLink>
-        </li>
+        </li> -->
         <li>
           <NuxtLink to="/contact" data-tooltip="Contact"
             ><span class="crt-icon crt-icon-contact"></span
           ></NuxtLink>
         </li>
-        <li>
+        <!-- <li>
           <NuxtLink to="/blog" data-tooltip="Blog"
             ><span class="crt-icon crt-icon-blog"></span
           ></NuxtLink>
