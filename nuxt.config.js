@@ -32,7 +32,7 @@ export default {
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [
-    '~/plugins/vuelidate.js',
+    { src: '~/plugins/vuelidate.js', mode: 'client' },
     { src: '~/plugins/vue-flash-message.js', mode: 'client' },
   ],
 
