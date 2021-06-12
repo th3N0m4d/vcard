@@ -18,6 +18,7 @@
                 <ul class="clear-list">
                   <li><NuxtLink to="/">home</NuxtLink></li>
                   <li><NuxtLink to="/experience">experience</NuxtLink></li>
+                  <li><NuxtLink to="/contact">contact</NuxtLink></li>
                   <!-- <li><a href="portfolio.html">portfolio</a></li>
                   <li class="has-sub-menu">
                     <a href="#">pages</a>
