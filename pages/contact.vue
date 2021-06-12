@@ -120,14 +120,17 @@ export default Vue.extend({
     },
   }),
   methods: {
-    async handleSubmit() {
+    async handleSubmit(event) {
+      const params = new URLSearchParams([
+        ...new FormData(event.target).entries(),
+      ])
       this.$v.$touch()
       if (!this.$v.$invalid) {
         try {
-          await fetch({
+          await fetch('/', {
             method: 'POST',
             headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-            body: this.$options.$data,
+            body: params,
           })
 
           this.showSuccessMessage()
