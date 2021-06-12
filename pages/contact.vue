@@ -129,8 +129,8 @@ export default Vue.extend({
         try {
           await fetch('/', {
             method: 'POST',
-            headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-            body: params,
+            headers: { 'Content-Type': 'multipart/form-data' },
+            body: params.toString(),
           })
 
           this.showSuccessMessage()
