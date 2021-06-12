@@ -10,7 +10,7 @@
           data-netlify="true"
           data-netlify-honeypot="bot-field"
           class="contact-form"
-          @submit.prevent="handleSubmit"
+          @submit="handleSubmit"
         >
           <div class="form-group">
             <label class="form-label" for="author">Your Name</label>
@@ -121,6 +121,7 @@ export default Vue.extend({
   }),
   methods: {
     async handleSubmit(event) {
+      event.preventDefault()
       const params = new URLSearchParams([
         ...new FormData(event.target).entries(),
       ])
