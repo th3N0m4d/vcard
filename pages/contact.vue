@@ -89,17 +89,16 @@
   </div>
 </template>
 
-//
-<script lang="js">
+<script>
 import Vue from 'vue'
 import { required, email } from 'vuelidate/lib/validators'
 
 const initialState = {
-      author: null,
-      email: null,
-      subject: null,
-      message: null,
-    }
+  author: null,
+  email: null,
+  subject: null,
+  message: null,
+}
 
 export default Vue.extend({
   data() {
@@ -107,38 +106,54 @@ export default Vue.extend({
   },
   validations: () => ({
     author: {
-      required
+      required,
     },
     email: {
       required,
-      email
+      email,
     },
     subject: {
       required,
     },
     message: {
-      required
-    }
+      required,
+    },
   }),
   methods: {
-    handleSubmit() {
+    async handleSubmit() {
       this.$v.$touch()
       if (!this.$v.$invalid) {
-        // TODO: Submit form
-        this.showFlashMessage()
-        this.resetForm()
+        try {
+          await fetch({
+            method: 'POST',
+            headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+            body: this.$options.$data,
+          })
+
+          this.showSuccessMessage()
+          this.resetForm()
+        } catch (error) {
+          this.showErrorMessage()
+        }
       }
     },
-    showFlashMessage(){
+    showSuccessMessage() {
       this.flashMessage.success({
         title: 'Your message has been successfully sent!',
-            message: 'Thanks for your message! I\'ll get back to you as soon as I can :)'
-        });
+        message:
+          "Thanks for your message! I'll get back to you as soon as I can :)",
+      })
     },
-    resetForm(){
+    showErrorMessage() {
+      this.flashMessage.error({
+        title: 'Message not sent!',
+        message: 'Something went wrong! Please try again!',
+      })
+    },
+    resetForm() {
       Object.assign(this.$data, initialState)
       this.$v.$reset()
-    }
+    },
   },
 })
 </script>
