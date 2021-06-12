@@ -7,6 +7,7 @@
         <form
           name="contact"
           method="post"
+          enctype="application/x-www-form-urlencoded"
           data-netlify="true"
           data-netlify-honeypot="bot-field"
           class="contact-form"
@@ -21,7 +22,7 @@
                 v-model="author"
                 class="form-item"
                 :class="{ error: $v.author.$error }"
-                name="name"
+                name="author"
                 type="text"
               />
             </div>
@@ -94,10 +95,10 @@ import Vue from 'vue'
 import { required, email } from 'vuelidate/lib/validators'
 
 const initialState = {
-  author: null,
-  email: null,
-  subject: null,
-  message: null,
+  author: '',
+  email: '',
+  subject: '',
+  message: '',
 }
 
 export default Vue.extend({
@@ -127,15 +128,20 @@ export default Vue.extend({
       this.$v.$touch()
       if (!this.$v.$invalid) {
         try {
-          await fetch('/', {
+          const { status } = await fetch('/', {
             method: 'POST',
-            headers: { 'Content-Type': 'multipart/form-data' },
+            headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
             body: params.toString(),
           })
 
-          this.showSuccessMessage()
-          this.resetForm()
+          if (status === 200) {
+            this.showSuccessMessage()
+            this.resetForm()
+          } else {
+            throw new Error(status)
+          }
         } catch (error) {
+          console.error(error)
           this.showErrorMessage()
         }
       }
