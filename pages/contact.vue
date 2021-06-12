@@ -6,8 +6,7 @@
       <div class="padd-box-sm">
         <form
           name="contact"
-          method="post"
-          enctype="application/x-www-form-urlencoded"
+          method="POST"
           data-netlify="true"
           data-netlify-honeypot="bot-field"
           class="contact-form"
