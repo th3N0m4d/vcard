@@ -126,7 +126,6 @@ export default Vue.extend({
         ...new FormData(event.target).entries(),
       ])
 
-      params.append('form-name', 'contact')
       this.$v.$touch()
       if (!this.$v.$invalid) {
         try {
