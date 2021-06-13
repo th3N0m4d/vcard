@@ -87,7 +87,7 @@
     </section>
 
     <!-- .section -->
-    <section class="section padd-box">
+    <section class="section brd-btm padd-box">
       <div class="row">
         <div class="col-sm-12 clear-mrg">
           <h2 class="title-thin text-muted">interests</h2>
@@ -100,6 +100,30 @@
       </div>
     </section>
     <!-- .section -->
+    <section class="section padd-box">
+      <h2 class="title-thin text-muted">Awards and Achievements</h2>
+      <div class="row">
+        <div class="col-sm-6 clear-mrg">
+          <div class="award-box">
+            <figure class="award-img">
+              <img
+                src="images/british-council-logo.png"
+                width="120"
+                alt="British Council Logo"
+              />
+            </figure>
+            <h3 class="award-title">IELTS exam</h3>
+            <div class="award-text text-muted clear-mrg">
+              <strong>Issued:</strong> September 2015
+              <br />
+              <strong>Credential ID:</strong> 15BR003607DANE051G
+            </div>
+          </div>
+        </div>
+        <!-- .col-sm-6 -->
+      </div>
+      <!-- .row -->
+    </section>
   </div>
 </template>
 
