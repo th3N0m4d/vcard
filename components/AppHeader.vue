@@ -5,11 +5,8 @@
         <div class="crt-head-row">
           <div id="crt-head-col1" class="crt-head-col text-left">
             <NuxtLink id="crt-logo" class="crt-logo" to="/">
-              <!-- <img
-                src="~/assets/images/uploads/brand/logo.svg"
-                alt="certy resume"
-              /> -->
-              <span>🖖 Hello world!</span>
+              <img src="/images/th3N0m4d.png" alt="logo" />
+              <!-- <span>🖖 Hello world!</span> -->
             </NuxtLink>
           </div>
           <div id="crt-head-col2" class="crt-head-col text-right">

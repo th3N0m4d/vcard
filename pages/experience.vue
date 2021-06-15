@@ -9,14 +9,14 @@
   </div>
 </template>
 
-<script lang="ts">
+<script>
 import { DateFormat } from '@/constants'
 import Vue from 'vue'
 import filters from '@/filters'
 
 export default Vue.extend({
   filters: { ...filters },
-  async asyncData({ $content }: any) {
+  async asyncData({ $content }) {
     const workHistory = await $content('experience')
       .sortBy('startDate', 'desc')
       .fetch()

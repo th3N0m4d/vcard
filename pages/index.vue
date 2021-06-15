@@ -127,7 +127,7 @@
   </div>
 </template>
 
-<script lang="ts">
+<script>
 import { mapGetters } from 'vuex'
 import filters from '@/filters'
 import { DateFormat } from '@/constants'
