@@ -25,9 +25,22 @@ export default Vue.extend({
       workHistory,
     }
   },
+
   data() {
     return {
       DateFormat,
+    }
+  },
+  head() {
+    return {
+      title: 'Job experience',
+      meta: [
+        {
+          hid: 'description',
+          name: 'description',
+          content: `On this page you can see my work history sorted from most recent to less recent`,
+        },
+      ],
     }
   },
 })

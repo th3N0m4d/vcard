@@ -84,8 +84,6 @@
     </div>
     <!-- .padd-box -->
 
-    <!-- TODO: Add map component -->
-
     <flash-message :position="'right bottom'"></flash-message>
   </div>
 </template>
@@ -120,6 +118,19 @@ export default Vue.extend({
       required,
     },
   }),
+  head() {
+    return {
+      title: 'Contact me',
+      meta: [
+        {
+          hid: 'description',
+          name: 'description',
+          content: `
+          Get in touch with me! Please, fill up the form and send me your message`,
+        },
+      ],
+    }
+  },
   methods: {
     async handleSubmit(event) {
       const params = new URLSearchParams([

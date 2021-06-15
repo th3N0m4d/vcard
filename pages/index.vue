@@ -139,6 +139,21 @@ export default {
       DateFormat,
     }
   },
+  head() {
+    return {
+      title: 'Welcome to my homepage',
+      meta: [
+        {
+          hid: 'description',
+          name: 'description',
+          content: `
+          Hello world! Welcome to my website! 
+          In this space you will find among other things, my professional background, 
+          contact information and blog entries of my favorite topics!`,
+        },
+      ],
+    }
+  },
   computed: {
     ...mapGetters([
       'personalInfo',
